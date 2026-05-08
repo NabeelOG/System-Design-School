@@ -9,6 +9,10 @@
 <body>
   <div class="layout">
     <aside class="sidebar">
+      <div class="sidebar-controls">
+        <button class="toggle-button" id="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+        <button class="toggle-button" id="sidebar-toggle" type="button" aria-pressed="false">Collapse</button>
+      </div>
       <div class="sidebar-header">
         <h1>System Design School</h1>
         <p>Browse the full PDF library by topic.</p>
@@ -2228,5 +2232,48 @@
       </section>
     </main>
   </div>
+  <script>
+    (() => {
+      const themeToggle = document.getElementById("theme-toggle");
+      const sidebarToggle = document.getElementById("sidebar-toggle");
+      const navDetails = Array.from(document.querySelectorAll(".nav-subtopic"));
+      const THEME_KEY = "sds-theme";
+      const SIDEBAR_KEY = "sds-sidebar";
+
+      const setTheme = (theme) => {
+        const isDark = theme === "dark";
+        document.documentElement.classList.toggle("theme-dark", isDark);
+        themeToggle.textContent = isDark ? "Light mode" : "Dark mode";
+        themeToggle.setAttribute("aria-pressed", String(isDark));
+        localStorage.setItem(THEME_KEY, theme);
+      };
+
+      const setSidebar = (collapsed) => {
+        document.body.classList.toggle("sidebar-collapsed", collapsed);
+        sidebarToggle.textContent = collapsed ? "Expand" : "Collapse";
+        sidebarToggle.setAttribute("aria-pressed", String(collapsed));
+        navDetails.forEach((detail) => {
+          detail.open = !collapsed;
+        });
+        localStorage.setItem(SIDEBAR_KEY, collapsed ? "collapsed" : "expanded");
+      };
+
+      const savedTheme = localStorage.getItem(THEME_KEY);
+      setTheme(savedTheme === "dark" ? "dark" : "light");
+
+      const savedSidebar = localStorage.getItem(SIDEBAR_KEY);
+      setSidebar(savedSidebar === "collapsed");
+
+      themeToggle.addEventListener("click", () => {
+        const isDark = document.documentElement.classList.contains("theme-dark");
+        setTheme(isDark ? "light" : "dark");
+      });
+
+      sidebarToggle.addEventListener("click", () => {
+        const collapsed = document.body.classList.contains("sidebar-collapsed");
+        setSidebar(!collapsed);
+      });
+    })();
+  </script>
 </body>
 </html>
