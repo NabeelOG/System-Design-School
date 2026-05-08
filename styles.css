@@ -68,7 +68,7 @@ body {
   color: var(--sidebar-text);
   border-radius: 999px;
   padding: 6px 12px;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
 }
