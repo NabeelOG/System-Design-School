@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>System Design School</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/htmx.org@1.9.12" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>System Design School</h1>
+        <p>Browse the full PDF library by topic.</p>
+      </div>
+      <nav class="sidebar-nav">
+  <div class="nav-section">
+    <h2>01 Introduction</h2>
+    <details class="nav-subtopic" open>
+      <summary>Basics</summary>
+      <ul>
+        <li><a class="nav-link" href="content/01-01-introduction-basics-your-essential-guide-to-success.html" hx-get="content/01-01-introduction-basics-your-essential-guide-to-success.html" hx-target="#content" hx-swap="innerHTML">01. Your Essential Guide to Success</a></li>
+        <li><a class="nav-link" href="content/01-02-introduction-basics-system-design-interview-study-guide.html" hx-get="content/01-02-introduction-basics-system-design-interview-study-guide.html" hx-target="#content" hx-swap="innerHTML">02. System Design Interview Study Guide</a></li>
+        <li><a class="nav-link" href="content/01-03-introduction-basics-system-design-interview-step-by-step-guide.html" hx-get="content/01-03-introduction-basics-system-design-interview-step-by-step-guide.html" hx-target="#content" hx-swap="innerHTML">03. System Design Interview Step-by-step Guide</a></li>
+        <li><a class="nav-link" href="content/01-04-introduction-basics-mastering-the-challenges-of-large-scale-distributed-systems-a-comprehensive-guide.html" hx-get="content/01-04-introduction-basics-mastering-the-challenges-of-large-scale-distributed-systems-a-comprehensive-guide.html" hx-target="#content" hx-swap="innerHTML">04. Mastering the Challenges of Large-Scale Distributed Systems A Comprehensive Guide</a></li>
+        <li><a class="nav-link" href="content/01-05-introduction-basics-8-ways-to-scale-any-system.html" hx-get="content/01-05-introduction-basics-8-ways-to-scale-any-system.html" hx-target="#content" hx-swap="innerHTML">05. 8 Ways to Scale Any System</a></li>
+      </ul>
+    </details>
+    <details class="nav-subtopic" open>
+      <summary>APIDESIGN</summary>
+      <ul>
+        <li><a class="nav-link" href="content/01-06-introduction-apidesign-api-design-in-system-design-interview.html" hx-get="content/01-06-introduction-apidesign-api-design-in-system-design-interview.html" hx-target="#content" hx-swap="innerHTML">06. API Design in System Design Interview</a></li>
+        <li><a class="nav-link" href="content/01-07-introduction-apidesign-api-design-example.html" hx-get="content/01-07-introduction-apidesign-api-design-example.html" hx-target="#content" hx-swap="innerHTML">07. API Design Example</a></li>
+        <li><a class="nav-link" href="content/01-08-introduction-apidesign-pagination-in-restful-apis-system-design-primer.html" hx-get="content/01-08-introduction-apidesign-pagination-in-restful-apis-system-design-primer.html" hx-target="#content" hx-swap="innerHTML">08. Pagination in RESTful APIs System Design Primer</a></li>
+        <li><a class="nav-link" href="content/01-09-introduction-apidesign-api-authentication.html" hx-get="content/01-09-introduction-apidesign-api-authentication.html" hx-target="#content" hx-swap="innerHTML">09. API Authentication</a></li>
+        <li><a class="nav-link" href="content/01-10-introduction-apidesign-api-authorization.html" hx-get="content/01-10-introduction-apidesign-api-authorization.html" hx-target="#content" hx-swap="innerHTML">10. API Authorization</a></li>
+        <li><a class="nav-link" href="content/01-11-introduction-apidesign-complete-guide-with-examples-for-microservices-architecture.html" hx-get="content/01-11-introduction-apidesign-complete-guide-with-examples-for-microservices-architecture.html" hx-target="#content" hx-swap="innerHTML">11. Complete Guide with Examples for Microservices Architecture</a></li>
+      </ul>
+    </details>
+    <details class="nav-subtopic" open>
+      <summary>General</summary>
+      <ul>
+        <li><a class="nav-link" href="content/01-12-introduction-general-non-functional-requirements.html" hx-get="content/01-12-introduction-general-non-functional-requirements.html" hx-target="#content" hx-swap="innerHTML">12. Non-functional Requirements</a></li>
+        <li><a class="nav-link" href="content/01-13-introduction-general-load-balancing.html" hx-get="content/01-13-introduction-general-load-balancing.html" hx-target="#content" hx-swap="innerHTML">13. Load Balancing</a></li>
+        <li><a class="nav-link" href="content/01-14-introduction-general-high-availability.html" hx-get="content/01-14-introduction-general-high-availability.html" hx-target="#content" hx-swap="innerHTML">14. High Availability</a></li>
+        <li><a class="nav-link" href="content/01-15-introduction-general-how-to-achieve-high-availability.html" hx-get="content/01-15-introduction-general-how-to-achieve-high-availability.html" hx-target="#content" hx-swap="innerHTML">15. How to Achieve High Availability</a></li>
+        <li><a class="nav-link" href="content/01-16-introduction-general-tech-stacks-to-achieve-high-availability.html" hx-get="content/01-16-introduction-general-tech-stacks-to-achieve-high-availability.html" hx-target="#content" hx-swap="innerHTML">16. Tech Stacks to Achieve High Availability</a></li>
+        <li><a class="nav-link" href="content/01-17-introduction-general-non-functional-requirement-in-system-design.html" hx-get="content/01-17-introduction-general-non-functional-requirement-in-system-design.html" hx-target="#content" hx-swap="innerHTML">17. Non-functional Requirement in System Design</a></li>
+        <li><a class="nav-link" href="content/01-18-introduction-general-non-functional-requirement-in-system-designs.html" hx-get="content/01-18-introduction-general-non-functional-requirement-in-system-designs.html" hx-target="#content" hx-swap="innerHTML">18. Non-functional Requirement in System Designs</a></li>
+      </ul>
+    </details>
+    <details class="nav-subtopic" open>
+      <summary>Resource Estimation</summary>
+      <ul>
+        <li><a class="nav-link" href="content/01-19-introduction-resource-estimation-back-of-envelope-calculation-in-system-design.html" hx-get="content/01-19-introduction-resource-estimation-back-of-envelope-calculation-in-system-design.html" hx-target="#content" hx-swap="innerHTML">19. Back of Envelope Calculation in System Design</a></li>
+        <li><a class="nav-link" href="content/01-20-introduction-resource-estimation-what-is-qps-and-how-it-affects-system-design.html" hx-get="content/01-20-introduction-resource-estimation-what-is-qps-and-how-it-affects-system-design.html" hx-target="#content" hx-swap="innerHTML">20. What is QPS and How it Affects System Design</a></li>
+        <li><a class="nav-link" href="content/01-21-introduction-resource-estimation-back-of-envelope-calculation-in-system-design-real-world-examples.html" hx-get="content/01-21-introduction-resource-estimation-back-of-envelope-calculation-in-system-design-real-world-examples.html" hx-target="#content" hx-swap="innerHTML">21. Back of Envelope Calculation in System Design Real World Examples</a></li>
+      </ul>
+    </details>
+    <details class="nav-subtopic" open>
+      <summary>Microservices</summary>
+      <ul>
+        <li><a class="nav-link" href="content/01-22-introduction-microservices-monolithic-architecture.html" hx-get="content/01-22-introduction-microservices-monolithic-architecture.html" hx-target="#content" hx-swap="innerHTML">22. Monolithic Architecture</a></li>
+      </ul>
+    </details>
+  </div>
+  <div class="nav-section">
+    <h2>02 Microservices &amp; Data Flow</h2>
+    <details class="nav-subtopic" open>
+      <summary>Synchronous Communication</summary>
+      <ul>
+        <li><a class="nav-link" href="content/02-01-microservices-data-flow-synchronous-communication-microservice-communication.html" hx-get="content/02-01-microservices-data-flow-synchronous-communication-microservice-communication.html" hx-target="#content" hx-swap="innerHTML">01. Microservice Communication</a></li>
+        <li><a class="nav-link" href="content/02-02-microservices-data-flow-synchronous-communication-synchronous-inter-service-communication-in-microservices-architecture.html" hx-get="content/02-02-microservices-data-flow-synchronous-communication-synchronous-inter-service-communication-in-microservices-architecture.html" hx-target="#content" hx-swap="innerHTML">02. Synchronous Inter-Service Communication in Microservices Architecture</a></li>
+        <li><a class="nav-link" href="content/02-03-microservices-data-flow-synchronous-communication-implementing-synchronous-communication.html" hx-get="content/02-03-microservices-data-flow-synchronous-communication-implementing-synchronous-communication.html" hx-target="#content" hx-swap="innerHTML">03. Implementing Synchronous Communication</a></li>
+        <li><a class="nav-link" href="content/02-04-microservices-data-flow-synchronous-communication-handling-failures-in-synchronous-communication.html" hx-get="content/02-04-microservices-data-flow-synchronous-communication-handling-failures-in-synchronous-communication.html" hx-target="#content" hx-swap="innerHTML">04. Handling Failures in Synchronous Communication</a></li>
+        <li><a class="nav-link" href="content/02-05-microservices-data-flow-synchronous-communication-using-timeout-to-handle-failures-in-microservices.html" hx-get="content/02-05-microservices-data-flow-synchronous-communication-using-timeout-to-handle-failures-in-microservices.html" hx-target="#content" hx-swap="innerHTML">05. Using Timeout to Handle Failures in Microservices</a></li>
+        <li><a class="nav-link" href="content/02-06-microservices-data-flow-synchronous-communication-using-retries-to-handle-failures-in-microservices.html" hx-get="content/02-06-microservices-data-flow-synchronous-communication-using-retries-to-handle-failures-in-microservices.html" hx-target="#content" hx-swap="innerHTML">06. Using Retries to Handle Failures in Microservices</a></li>
+        <li><a class="nav-link" href="content/02-07-microservices-data-flow-synchronous-communication-circuit-breaker.html" hx-get="content/02-07-microservices-data-flow-synchronous-communication-circuit-breaker.html" hx-target="#content" hx-swap="innerHTML">07. Circuit Breaker</a></li>
+        <li><a class="nav-link" href="content/02-08-microservices-data-flow-synchronous-communication-fallbacks-in-microservice-failures.html" hx-get="content/02-08-microservices-data-flow-synchronous-communication-fallbacks-in-microservice-failures.html" hx-target="#content" hx-swap="innerHTML">08. Fallbacks in Microservice Failures</a></li>
+        <li><a class="nav-link" href="content/02-09-microservices-data-flow-synchronous-communication-service-discovery.html" hx-get="content/02-09-microservices-data-flow-synchronous-communication-service-discovery.html" hx-target="#content" hx-swap="innerHTML">09. Service Discovery</a></li>
+      </ul>
+    </details>
+    <details class="nav-subtopic" open>
+      <summary>Asynchronous Communication</summary>
+      <ul>
+        <li><a class="nav-link" href="content/02-10-microservices-data-flow-asynchronous-communication-asynchronous-communications-through-messaging.html" hx-get="content/02-10-microservices-data-flow-asynchronous-communication-asynchronous-communications-through-messaging.html" hx-target="#content" hx-swap="innerHTML">10. Asynchronous Communications Through Messaging</a></li>
+        <li><a class="nav-link" href="content/02-11-microservices-data-flow-asynchronous-communication-enhance-your-applications-performance-with-amqp-and-log-based-systems.html" hx-get="content/02-11-microservices-data-flow-asynchronous-communication-enhance-your-applications-performance-with-amqp-and-log-based-systems.html" hx-target="#content" hx-swap="innerHTML">11. Enhance Your Applications Performance with AMQP and Log-Based Systems</a></li>
+        <li><a class="nav-link" href="content/02-12-microservices-data-flow-asynchronous-communication-from-one-to-one-to-pub-sub-and-beyond.html" hx-get="content/02-12-microservices-data-flow-asynchronous-communication-from-one-to-one-to-pub-sub-and-beyond.html" hx-target="#content" hx-swap="innerHTML">12. From One-to-One to Pub Sub and Beyond</a></li>
+        <li><a class="nav-link" href="content/02-13-microservices-data-flow-asynchronous-communication-effortlessly-manage-image-downloads-with-redis-queue-a-step-by-step-guide.html" hx-get="content/02-13-microservices-data-flow-asynchronous-communication-effortlessly-manage-image-downloads-with-redis-queue-a-step-by-step-guide.html" hx-target="#content" hx-swap="innerHTML">13. Effortlessly Manage Image Downloads with Redis Queue A Step-by-Step Guide</a></li>
+        <li><a class="nav-link" href="content/02-14-microservices-data-flow-asynchronous-communication-log-based-message-queues.html" hx-get="content/02-14-microservices-data-flow-asynchronous-communication-log-based-message-queues.html" hx-target="#content" hx-swap="innerHTML">14. Log-based message queues</a></li>
+        <li><a class="nav-link" href="content/02-15-microservices-data-flow-asynchronous-communication-a-beginners-guide-to-real-time-data-streaming.html" hx-get="content/02-15-microservices-data-flow-asynchronous-communication-a-beginners-guide-to-real-time-data-streaming.html" hx-target="#content" hx-swap="innerHTML">15. A Beginners Guide to Real-Time Data Streaming</a></li>
+        <li><a class="nav-link" href="content/02-16-microservices-data-flow-asynchronous-communication-how-to-set-up-kafka-with-multiple-partitions-and-consumers-a-step-by-step-guide.html" hx-get="content/02-16-microservices-data-flow-asynchronous-communication-how-to-set-up-kafka-with-multiple-partitions-and-consumers-a-step-by-step-guide.html" hx-target="#content" hx-swap="innerHTML">16. How to Set Up Kafka with Multiple Partitions and Consumers A Step-by-Step Guide</a></li>
+      </ul>
+    </details>
+  </div>
+  <div class="nav-section">
+    <h2>03 Scaling Services</h2>
+    <details class="nav-subtopic" open>
+      <summary>Horizontal Scaling</summary>
+      <ul>
+        <li><a class="nav-link" href="content/03-01-scaling-services-horizontal-scaling-physical-servers.html" hx-get="content/03-01-scaling-services-horizontal-scaling-physical-servers.html" hx-target="#content" hx-swap="innerHTML">01. Physical Servers</a></li>
+        <li><a class="nav-link" href="content/03-02-scaling-services-horizontal-scaling-stateless-vs-stateful.html" hx-get="content/03-02-scaling-services-horizontal-scaling-stateless-vs-stateful.html" hx-target="#content" hx-swap="innerHTML">02. Stateless vs Stateful</a></li>
+        <li><a class="nav-link" href="content/03-03-scaling-services-horizontal-scaling-horizontal-scaling.html" hx-get="content/03-03-scaling-services-horizontal-scaling-horizontal-scaling.html" hx-target="#content" hx-swap="innerHTML">03. Horizontal Scaling</a></li>
+        <li><a class="nav-link" href="content/03-04-scaling-services-horizontal-scaling-boost-performance-reliability-and-scalability-for-your-applications.html" hx-get="content/03-04-scaling-services-horizontal-scaling-boost-performance-reliability-and-scalability-for-your-applications.html" hx-target="#content" hx-swap="innerHTML">04. Boost Performance Reliability and Scalability for Your Applications</a></li>
+        <li><a class="nav-link" href="content/03-05-scaling-services-horizontal-scaling-a-step-by-step-guide-to-distributing-traffic-across-web-servers.html" hx-get="content/03-05-scaling-services-horizontal-scaling-a-step-by-step-guide-to-distributing-traffic-across-web-servers.html" hx-target="#content" hx-swap="innerHTML">05. A Step-by-Step Guide to Distributing Traffic Across Web Servers</a></li>
+        <li><a class="nav-link" href="content/03-06-scaling-services-horizontal-scaling-auto-scaling.html" hx-get="content/03-06-scaling-services-horizontal-scaling-auto-scaling.html" hx-target="#content" hx-swap="innerHTML">06. Auto Scaling</a></li>
+      </ul>
+    </details>
+    <details class="nav-subtopic" open>
+      <summary>Read Write Separation</summary>
+      <ul>
+        <li><a class="nav-link" href="content/03-07-scaling-services-read-write-separation-read-write-separation.html" hx-get="content/03-07-scaling-services-read-write-separation-read-write-separation.html" hx-target="#content" hx-swap="innerHTML">07. Read-Write Separation</a></li>
+        <li><a class="nav-link" href="content/03-08-scaling-services-read-write-separation-cqrs-pattern-in-system-design.html" hx-get="content/03-08-scaling-services-read-write-separation-cqrs-pattern-in-system-design.html" hx-target="#content" hx-swap="innerHTML">08. CQRS Pattern in System Design</a></li>
+      </ul>
+    </details>
+    <details class="nav-subtopic" open>
+      <summary>Caching</summary>
+      <ul>
+        <li><a class="nav-link" href="content/03-09-scaling-services-caching-time-bounded-copies-for-system-design.html" hx-get="content/03-09-scaling-services-caching-time-bounded-copies-for-system-design.html" hx-target="#content" hx-swap="innerHTML">09. Time-Bounded Copies for System Design</a></li>
+        <li><a class="nav-link" href="content/03-10-scaling-services-caching-browser-cdn-application-and-database-layers.html" hx-get="content/03-10-scaling-services-caching-browser-cdn-application-and-database-layers.html" hx-target="#content" hx-swap="innerHTML">10. Browser CDN Application and Database Layers</a></li>
+        <li><a class="nav-link" href="content/03-11-scaling-services-caching-choosing-the-right-caching-layer.html" hx-get="content/03-11-scaling-services-caching-choosing-the-right-caching-layer.html" hx-target="#content" hx-swap="innerHTML">11. Choosing the Right Caching Layer</a></li>
+        <li><a class="nav-link" href="content/03-12-scaling-services-caching-cache-key-design.html" hx-get="content/03-12-scaling-services-caching-cache-key-design.html" hx-target="#content" hx-swap="innerHTML">12. Cache Key Design</a></li>
+        <li><a class="nav-link" href="content/03-13-scaling-services-caching-read-through.html" hx-get="content/03-13-scaling-services-caching-read-through.html" hx-target="#content" hx-swap="innerHTML">13. Read-Through</a></li>
+        <li><a class="nav-link" href="content/03-14-scaling-services-caching-cache-lab-implement-cache-aside-read-pattern.html" hx-get="content/03-14-scaling-services-caching-cache-lab-implement-cache-aside-read-pattern.html" hx-target="#content" hx-swap="innerHTML">14. Cache Lab Implement Cache-Aside Read Pattern</a></li>
+        <li><a class="nav-link" href="content/03-15-scaling-services-caching-write-through.html" hx-get="content/03-15-scaling-services-caching-write-through.html" hx-target="#content" hx-swap="innerHTML">15. Write-Through</a></li>
+        <li><a class="nav-link" href="content/03-16-scaling-services-caching-the-dual-write-problem.html" hx-get="content/03-16-scaling-services-caching-the-dual-write-problem.html" hx-target="#content" hx-swap="innerHTML">16. The Dual-Write Problem</a></li>
+        <li><a class="nav-link" href="content/03-17-scaling-services-caching-write-behind-worker-with-crash-simulation.html" hx-get="content/03-17-scaling-services-caching-write-behind-worker-with-crash-simulation.html" hx-target="#content" hx-swap="innerHTML">17. Write-Behind Worker with Crash Simulation</a></li>
+        <li><a class="nav-link" href="content/03-18-scaling-services-caching-stale-while-revalidate.html" hx-get="content/03-18-scaling-services-caching-stale-while-revalidate.html" hx-target="#content" hx-swap="innerHTML">18. Stale-While-Revalidate</a></li>
+        <li><a class="nav-link" href="content/03-19-scaling-services-caching-eviction-sizing.html" hx-get="content/03-19-scaling-services-caching-eviction-sizing.html" hx-target="#content" hx-swap="innerHTML">19. Eviction Sizing</a></li>
+        <li><a class="nav-link" href="content/03-20-scaling-services-caching-distributed-caching.html" hx-get="content/03-20-scaling-services-caching-distributed-caching.html" hx-target="#content" hx-swap="innerHTML">20. Distributed Caching</a></li>
+        <li><a class="nav-link" href="content/03-21-scaling-services-caching-cache-high-availability.html" hx-get="content/03-21-scaling-services-caching-cache-high-availability.html" hx-target="#content" hx-swap="innerHTML">21. Cache High Availability</a></li>
+        <li><a class="nav-link" href="content/03-22-scaling-services-caching-warming-strategies-and-database-protection.html" hx-get="content/03-22-scaling-services-caching-warming-strategies-and-database-protection.html" hx-target="#content" hx-swap="innerHTML">22. Warming Strategies and Database Protection</a></li>
+        <li><a class="nav-link" href="content/03-23-scaling-services-caching-failure-modes.html" hx-get="content/03-23-scaling-services-caching-failure-modes.html" hx-target="#content" hx-swap="innerHTML">23. Failure Modes</a></li>
+        <li><a class="nav-link" href="content/03-24-scaling-services-caching-simulating-failure-modes-and-defenses.html" hx-get="content/03-24-scaling-services-caching-simulating-failure-modes-and-defenses.html" hx-target="#content" hx-swap="innerHTML">24. Simulating Failure Modes and Defenses</a></li>
+        <li><a class="nav-link" href="content/03-25-scaling-services-caching-security-observability.html" hx-get="content/03-25-scaling-services-caching-security-observability.html" hx-target="#content" hx-swap="innerHTML">25. Security Observability</a></li>
+        <li><a class="nav-link" href="content/03-26-scaling-services-caching-how-to-discuss-caching-in-system-design.html" hx-get="content/03-26-scaling-services-caching-how-to-discuss-caching-in-system-design.html" hx-target="#content" hx-swap="innerHTML">26. How to Discuss Caching in System Design</a></li>
+      </ul>
+    </details>
+    <details class="nav-subtopic" open>
+      <summary>Dataflow</summary>
+      <ul>
+        <li><a class="nav-link" href="content/03-27-scaling-services-dataflow-3-efficient-ways-to-enable-inter-process-communication.html" hx-get="content/03-27-scaling-services-dataflow-3-efficient-ways-to-enable-inter-process-communication.html" hx-target="#content" hx-swap="innerHTML">27. 3 Efficient Ways to Enable Inter-Process Communication</a></li>
+        <li><a class="nav-link" href="content/03-28-scaling-services-dataflow-push-vs-pull-in-system-design.html" hx-get="content/03-28-scaling-services-dataflow-push-vs-pull-in-system-design.html" hx-target="#content" hx-swap="innerHTML">28. Push vs Pull in System Design</a></li>
+        <li><a class="nav-link" href="content/03-29-scaling-services-dataflow-push-vs-pull-in-twitters-timeline-system-design.html" hx-get="content/03-29-scaling-services-dataflow-push-vs-pull-in-twitters-timeline-system-design.html" hx-target="#content" hx-swap="innerHTML">29. Push vs Pull in Twitters Timeline System Design</a></li>
+      </ul>
+    </details>
+  </div>
+  <div class="nav-section">
+    <h2>04 Data Storage</h2>
+    <details class="nav-subtopic" open>
+      <summary>Data Structures Behind Databases</summary>
+      <ul>
+        <li><a class="nav-link" href="content/04-01-data-storage-data-structures-behind-databases-database-storage-engines-system-design-primer.html" hx-get="content/04-01-data-storage-data-structures-behind-databases-database-storage-engines-system-design-primer.html" hx-target="#content" hx-swap="innerHTML">01. Database Storage Engines System Design Primer</a></li>
+        <li><a class="nav-link" href="content/04-02-data-storage-data-structures-behind-databases-understand-its-structure-operations-and-use-cases-now.html" hx-get="content/04-02-data-storage-data-structures-behind-databases-understand-its-structure-operations-and-use-cases-now.html" hx-target="#content" hx-swap="innerHTML">02. Understand Its Structure Operations and Use-Cases Now</a></li>
+        <li><a class="nav-link" href="content/04-03-data-storage-data-structures-behind-databases-sorted-string-tables-system-design-primer.html" hx-get="content/04-03-data-storage-data-structures-behind-databases-sorted-string-tables-system-design-primer.html" hx-target="#content" hx-swap="innerHTML">03. Sorted String Tables System Design Primer</a></li>
+        <li><a class="nav-link" href="content/04-04-data-storage-data-structures-behind-databases-lsm-trees-system-design-primer.html" hx-get="content/04-04-data-storage-data-structures-behind-databases-lsm-trees-system-design-primer.html" hx-target="#content" hx-swap="innerHTML">04. LSM Trees System Design Primer</a></li>
+      </ul>
+    </details>
+    <details class="nav-subtopic" open>
+      <summary>Storage</summary>
+      <ul>
+        <li><a class="nav-link" href="content/04-05-data-storage-storage-how-to-choose-the-right-storage-solution.html" hx-get="content/04-05-data-storage-storage-how-to-choose-the-right-storage-solution.html" hx-target="#content" hx-swap="innerHTML">05. How to Choose the Right Storage Solution</a></li>
+        <li><a class="nav-link" href="content/04-06-data-storage-storage-sql-database.html" hx-get="content/04-06-data-storage-storage-sql-database.html" hx-target="#content" hx-swap="innerHTML">06. SQL Database</a></li>
+        <li><a class="nav-link" href="content/04-07-data-storage-storage-flexibility-scalability-and-modern-applications.html" hx-get="content/04-07-data-storage-storage-flexibility-scalability-and-modern-applications.html" hx-target="#content" hx-swap="innerHTML">07. Flexibility Scalability and Modern Applications</a></li>
+        <li><a class="nav-link" href="content/04-08-data-storage-storage-key-value-database.html" hx-get="content/04-08-data-storage-storage-key-value-database.html" hx-target="#content" hx-swap="innerHTML">08. Key-value Database</a></li>
+        <li><a class="nav-link" href="content/04-09-data-storage-storage-document-database.html" hx-get="content/04-09-data-storage-storage-document-database.html" hx-target="#content" hx-swap="innerHTML">09. Document Database</a></li>
+        <li><a class="nav-link" href="content/04-10-data-storage-storage-going-beyond-sqls-like-for-lightning-fast-results.html" hx-get="content/04-10-data-storage-storage-going-beyond-sqls-like-for-lightning-fast-results.html" hx-target="#content" hx-swap="innerHTML">10. Going Beyond SQLs LIKE for Lightning-Fast Results</a></li>
+        <li><a class="nav-link" href="content/04-11-data-storage-storage-differences-between-transactional-oltp-and-analytical-olap-systems-explained.html" hx-get="content/04-11-data-storage-storage-differences-between-transactional-oltp-and-analytical-olap-systems-explained.html" hx-target="#content" hx-swap="innerHTML">11. Differences Between Transactional OLTP and Analytical OLAP Systems Explained</a></li>
+        <li><a class="nav-link" href="content/04-12-data-storage-storage-revolutionizing-data-management-with-scalable-durable-and-cost-effective-solutions.html" hx-get="content/04-12-data-storage-storage-revolutionizing-data-management-with-scalable-durable-and-cost-effective-solutions.html" hx-target="#content" hx-swap="innerHTML">12. Revolutionizing Data Management with Scalable Durable and Cost-Effective Solutions</a></li>
+        <li><a class="nav-link" href="content/04-13-data-storage-storage-sql-vs-no-sql-in-system-design.html" hx-get="content/04-13-data-storage-storage-sql-vs-no-sql-in-system-design.html" hx-target="#content" hx-swap="innerHTML">13. SQL vs No SQL in System Design</a></li>
+      </ul>
+    </details>
+  </div>
+  <div class="nav-section">
+    <h2>05 Scaling Data Storage</h2>
+    <details class="nav-subtopic" open>
+      <summary>Data Replication</summary>
+      <ul>
+        <li><a class="nav-link" href="content/05-01-scaling-data-storage-data-replication-databases-scaling-in-system-design.html" hx-get="content/05-01-scaling-data-storage-data-replication-databases-scaling-in-system-design.html" hx-target="#content" hx-swap="innerHTML">01. Databases Scaling in System Design</a></li>
+        <li><a class="nav-link" href="content/05-02-scaling-data-storage-data-replication-database-replication-in-system-design.html" hx-get="content/05-02-scaling-data-storage-data-replication-database-replication-in-system-design.html" hx-target="#content" hx-swap="innerHTML">02. Database Replication in System Design</a></li>
+        <li><a class="nav-link" href="content/05-03-scaling-data-storage-data-replication-implementing-database-replication-in-system-design.html" hx-get="content/05-03-scaling-data-storage-data-replication-implementing-database-replication-in-system-design.html" hx-target="#content" hx-swap="innerHTML">03. Implementing Database Replication in System Design</a></li>
+        <li><a class="nav-link" href="content/05-04-scaling-data-storage-data-replication-a-hands-on-tutorial-for-setting-up-a-leader-follower-cluster.html" hx-get="content/05-04-scaling-data-storage-data-replication-a-hands-on-tutorial-for-setting-up-a-leader-follower-cluster.html" hx-target="#content" hx-swap="innerHTML">04. A Hands-On Tutorial for Setting Up a Leader-Follower Cluster</a></li>
+        <li><a class="nav-link" href="content/05-05-scaling-data-storage-data-replication-change-data-capture.html" hx-get="content/05-05-scaling-data-storage-data-replication-change-data-capture.html" hx-target="#content" hx-swap="innerHTML">05. Change Data Capture</a></li>
+      </ul>
+    </details>
+    <details class="nav-subtopic" open>
+      <summary>Data Partitioning</summary>
+      <ul>
+        <li><a class="nav-link" href="content/05-06-scaling-data-storage-data-partitioning-database-partitioning.html" hx-get="content/05-06-scaling-data-storage-data-partitioning-database-partitioning.html" hx-target="#content" hx-swap="innerHTML">06. Database Partitioning</a></li>
+        <li><a class="nav-link" href="content/05-07-scaling-data-storage-data-partitioning-advanced-database-partitioning-techniques-and-key-selection.html" hx-get="content/05-07-scaling-data-storage-data-partitioning-advanced-database-partitioning-techniques-and-key-selection.html" hx-target="#content" hx-swap="innerHTML">07. Advanced Database Partitioning Techniques and Key Selection</a></li>
+        <li><a class="nav-link" href="content/05-08-scaling-data-storage-data-partitioning-consistent-hashing.html" hx-get="content/05-08-scaling-data-storage-data-partitioning-consistent-hashing.html" hx-target="#content" hx-swap="innerHTML">08. Consistent Hashing</a></li>
+        <li><a class="nav-link" href="content/05-09-scaling-data-storage-data-partitioning-boost-performance-with-real-world-examples-and-sql-commands.html" hx-get="content/05-09-scaling-data-storage-data-partitioning-boost-performance-with-real-world-examples-and-sql-commands.html" hx-target="#content" hx-swap="innerHTML">09. Boost Performance with Real-World Examples and SQL Commands</a></li>
+      </ul>
+    </details>
+  </div>
+  <div class="nav-section">
+    <h2>06 Big Data</h2>
+    <details class="nav-subtopic" open>
+      <summary>Overview</summary>
+      <ul>
+        <li><a class="nav-link" href="content/06-01-big-data-overview-overview-and-when-to-use-each.html" hx-get="content/06-01-big-data-overview-overview-and-when-to-use-each.html" hx-target="#content" hx-swap="innerHTML">01. Overview and When to Use Each</a></li>
+      </ul>
+    </details>
+    <details class="nav-subtopic" open>
+      <summary>Batch Processing</summary>
+      <ul>
+        <li><a class="nav-link" href="content/06-02-big-data-batch-processing-unix-pipelines.html" hx-get="content/06-02-big-data-batch-processing-unix-pipelines.html" hx-target="#content" hx-swap="innerHTML">02. Unix Pipelines</a></li>
+        <li><a class="nav-link" href="content/06-03-big-data-batch-processing-map-shuffle-and-reduce-explained.html" hx-get="content/06-03-big-data-batch-processing-map-shuffle-and-reduce-explained.html" hx-target="#content" hx-swap="innerHTML">03. Map Shuffle and Reduce Explained</a></li>
+        <li><a class="nav-link" href="content/06-04-big-data-batch-processing-distributed-file-system-for-big-data.html" hx-get="content/06-04-big-data-batch-processing-distributed-file-system-for-big-data.html" hx-target="#content" hx-swap="innerHTML">04. Distributed File System for Big Data</a></li>
+        <li><a class="nav-link" href="content/06-05-big-data-batch-processing-modern-batch-processing-beyond-map-reduce.html" hx-get="content/06-05-big-data-batch-processing-modern-batch-processing-beyond-map-reduce.html" hx-target="#content" hx-swap="innerHTML">05. Modern Batch Processing Beyond Map Reduce</a></li>
+      </ul>
+    </details>
+    <details class="nav-subtopic" open>
+      <summary>Stream Processing</summary>
+      <ul>
+        <li><a class="nav-link" href="content/06-06-big-data-stream-processing-unbounded-data-and-message-brokers.html" hx-get="content/06-06-big-data-stream-processing-unbounded-data-and-message-brokers.html" hx-target="#content" hx-swap="innerHTML">06. Unbounded Data and Message Brokers</a></li>
+        <li><a class="nav-link" href="content/06-07-big-data-stream-processing-windowing-patterns.html" hx-get="content/06-07-big-data-stream-processing-windowing-patterns.html" hx-target="#content" hx-swap="innerHTML">07. Windowing Patterns</a></li>
+        <li><a class="nav-link" href="content/06-08-big-data-stream-processing-event-time-processing-time-and-watermarks-in-stream-processing.html" hx-get="content/06-08-big-data-stream-processing-event-time-processing-time-and-watermarks-in-stream-processing.html" hx-target="#content" hx-swap="innerHTML">08. Event Time Processing Time and Watermarks in Stream Processing</a></li>
+        <li><a class="nav-link" href="content/06-09-big-data-stream-processing-delivery-guarantees.html" hx-get="content/06-09-big-data-stream-processing-delivery-guarantees.html" hx-target="#content" hx-swap="innerHTML">09. Delivery Guarantees</a></li>
+        <li><a class="nav-link" href="content/06-10-big-data-stream-processing-modern-stream-processing-flink-and-kafka-streams.html" hx-get="content/06-10-big-data-stream-processing-modern-stream-processing-flink-and-kafka-streams.html" hx-target="#content" hx-swap="innerHTML">10. Modern Stream Processing Flink and Kafka Streams</a></li>
+      </ul>
+    </details>
+    <details class="nav-subtopic" open>
+      <summary>Hybrid Architectures</summary>
+      <ul>
+        <li><a class="nav-link" href="content/06-11-big-data-hybrid-architectures-lambda-architecture.html" hx-get="content/06-11-big-data-hybrid-architectures-lambda-architecture.html" hx-target="#content" hx-swap="innerHTML">11. Lambda Architecture</a></li>
+        <li><a class="nav-link" href="content/06-12-big-data-hybrid-architectures-kappa-architecture.html" hx-get="content/06-12-big-data-hybrid-architectures-kappa-architecture.html" hx-target="#content" hx-swap="innerHTML">12. Kappa Architecture</a></li>
+        <li><a class="nav-link" href="content/06-13-big-data-hybrid-architectures-unified-batch-and-stream-processing-flink-spark-beam.html" hx-get="content/06-13-big-data-hybrid-architectures-unified-batch-and-stream-processing-flink-spark-beam.html" hx-target="#content" hx-swap="innerHTML">13. Unified Batch and Stream Processing Flink Spark Beam</a></li>
+      </ul>
+    </details>
+    <details class="nav-subtopic" open>
+      <summary>Pipeline Operations</summary>
+      <ul>
+        <li><a class="nav-link" href="content/06-14-big-data-pipeline-operations-etl-vs-elt-data-pipeline-transformation-patterns.html" hx-get="content/06-14-big-data-pipeline-operations-etl-vs-elt-data-pipeline-transformation-patterns.html" hx-target="#content" hx-swap="innerHTML">14. ETL vs ELT Data Pipeline Transformation Patterns</a></li>
+        <li><a class="nav-link" href="content/06-15-big-data-pipeline-operations-backfill-and-reprocessing-strategies-for-data-pipelines.html" hx-get="content/06-15-big-data-pipeline-operations-backfill-and-reprocessing-strategies-for-data-pipelines.html" hx-target="#content" hx-swap="innerHTML">15. Backfill and Reprocessing Strategies for Data Pipelines</a></li>
+        <li><a class="nav-link" href="content/06-16-big-data-pipeline-operations-error-handling.html" hx-get="content/06-16-big-data-pipeline-operations-error-handling.html" hx-target="#content" hx-swap="innerHTML">16. Error Handling</a></li>
+      </ul>
+    </details>
+    <details class="nav-subtopic" open>
+      <summary>Real-time &amp; Analytics</summary>
+      <ul>
+        <li><a class="nav-link" href="content/06-17-big-data-real-time-analytics-materialized-views.html" hx-get="content/06-17-big-data-real-time-analytics-materialized-views.html" hx-target="#content" hx-swap="innerHTML">17. Materialized Views</a></li>
+        <li><a class="nav-link" href="content/06-18-big-data-real-time-analytics-time-series-patterns.html" hx-get="content/06-18-big-data-real-time-analytics-time-series-patterns.html" hx-target="#content" hx-swap="innerHTML">18. Time-Series Patterns</a></li>
+        <li><a class="nav-link" href="content/06-19-big-data-real-time-analytics-analytics-architecture.html" hx-get="content/06-19-big-data-real-time-analytics-analytics-architecture.html" hx-target="#content" hx-swap="innerHTML">19. Analytics Architecture</a></li>
+      </ul>
+    </details>
+  </div>
+  <div class="nav-section">
+    <h2>07 Patterns &amp; Templates</h2>
+    <details class="nav-subtopic" open>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a class="nav-link" href="content/07-01-patterns-templates-patterns-database-optimization-techniques.html" hx-get="content/07-01-patterns-templates-patterns-database-optimization-techniques.html" hx-target="#content" hx-swap="innerHTML">01. Database Optimization Techniques</a></li>
+        <li><a class="nav-link" href="content/07-02-patterns-templates-patterns-cache-first-pattern.html" hx-get="content/07-02-patterns-templates-patterns-cache-first-pattern.html" hx-target="#content" hx-swap="innerHTML">02. Cache-First Pattern</a></li>
+        <li><a class="nav-link" href="content/07-03-patterns-templates-patterns-pre-computing-pattern.html" hx-get="content/07-03-patterns-templates-patterns-pre-computing-pattern.html" hx-target="#content" hx-swap="innerHTML">03. Pre-Computing Pattern</a></li>
+        <li><a class="nav-link" href="content/07-04-patterns-templates-patterns-database-per-microservice.html" hx-get="content/07-04-patterns-templates-patterns-database-per-microservice.html" hx-target="#content" hx-swap="innerHTML">04. Database Per Microservice</a></li>
+        <li><a class="nav-link" href="content/07-05-patterns-templates-patterns-multi-system-data-sync.html" hx-get="content/07-05-patterns-templates-patterns-multi-system-data-sync.html" hx-target="#content" hx-swap="innerHTML">05. Multi-System Data Sync</a></li>
+        <li><a class="nav-link" href="content/07-06-patterns-templates-patterns-unique-id-generators.html" hx-get="content/07-06-patterns-templates-patterns-unique-id-generators.html" hx-target="#content" hx-swap="innerHTML">06. Unique ID Generators</a></li>
+        <li><a class="nav-link" href="content/07-07-patterns-templates-patterns-rate-limiting-patterns.html" hx-get="content/07-07-patterns-templates-patterns-rate-limiting-patterns.html" hx-target="#content" hx-swap="innerHTML">07. Rate Limiting Patterns</a></li>
+        <li><a class="nav-link" href="content/07-08-patterns-templates-patterns-two-stage-processing-pattern-for-system-design-interviews.html" hx-get="content/07-08-patterns-templates-patterns-two-stage-processing-pattern-for-system-design-interviews.html" hx-target="#content" hx-swap="innerHTML">08. Two-Stage Processing Pattern for System Design Interviews</a></li>
+        <li><a class="nav-link" href="content/07-09-patterns-templates-patterns-fan-out-fan-in-pattern.html" hx-get="content/07-09-patterns-templates-patterns-fan-out-fan-in-pattern.html" hx-target="#content" hx-swap="innerHTML">09. Fan-Out Fan-In Pattern</a></li>
+        <li><a class="nav-link" href="content/07-10-patterns-templates-patterns-saga-pattern.html" hx-get="content/07-10-patterns-templates-patterns-saga-pattern.html" hx-target="#content" hx-swap="innerHTML">10. Saga Pattern</a></li>
+      </ul>
+    </details>
+    <details class="nav-subtopic" open>
+      <summary>Template</summary>
+      <ul>
+        <li><a class="nav-link" href="content/07-11-patterns-templates-template-message-queue.html" hx-get="content/07-11-patterns-templates-template-message-queue.html" hx-target="#content" hx-swap="innerHTML">11. Message queue</a></li>
+        <li><a class="nav-link" href="content/07-12-patterns-templates-template-build-a-high-performance-social-media-comment-system-with-kafka-redis.html" hx-get="content/07-12-patterns-templates-template-build-a-high-performance-social-media-comment-system-with-kafka-redis.html" hx-target="#content" hx-swap="innerHTML">12. Build a High-Performance Social Media Comment System with Kafka Redis</a></li>
+      </ul>
+    </details>
+  </div>
+      </nav>
+    </aside>
+    <main id="content" class="content" hx-get="content/01-01-introduction-basics-your-essential-guide-to-success.html" hx-trigger="load" hx-swap="innerHTML">
+      <div class="loading">Loading content…</div>
+    </main>
+  </div>
+</body>
+</html>
