@@ -2284,7 +2284,7 @@
         try {
           return new URL(href, window.location.href).toString();
         } catch (error) {
-          console.error("Failed to resolve PDF URL", error);
+          console.error("Failed to resolve PDF URL:", href, error);
           return href;
         }
       };
