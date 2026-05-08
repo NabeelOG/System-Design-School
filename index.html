@@ -2284,19 +2284,25 @@
         try {
           return new URL(href, window.location.href).toString();
         } catch (error) {
-          console.error("Failed to resolve PDF URL:", href, error);
+          console.error(
+            "Failed to resolve PDF URL:",
+            href,
+            "Expected an absolute URL or a relative PDF path.",
+            error
+          );
           return href;
         }
       };
 
       const injectPdfEmbeds = () => {
         const docs = Array.from(document.querySelectorAll(".doc"));
-        docs.forEach((doc) => {
+        docs.forEach((doc, index) => {
           const link = doc.querySelector(".pdf-link");
           const content = doc.querySelector(".doc-content");
           if (!link || !content) {
             return;
           }
+          link.dataset.originalHref = link.getAttribute("href") || "";
           const resolvedHref = resolvePdfHref(link.getAttribute("href"));
           if (!resolvedHref) {
             return;
@@ -2308,7 +2314,7 @@
           const frame = document.createElement("iframe");
           frame.className = "pdf-embed-frame";
           frame.src = pdfUrl;
-          frame.loading = "lazy";
+          frame.loading = index < 2 ? "eager" : "lazy";
           const title = doc.querySelector("h1")?.textContent?.trim();
           frame.title = title ? `PDF preview for ${title}` : "PDF preview";
           container.appendChild(frame);
