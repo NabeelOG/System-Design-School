@@ -119,6 +119,16 @@ body {
   margin: 0 auto;
 }
 
+.doc-section {
+  scroll-margin-top: 24px;
+}
+
+.doc-section + .doc-section {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
 .doc-header {
   border-bottom: 1px solid var(--border);
   padding-bottom: 16px;
