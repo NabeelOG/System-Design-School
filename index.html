@@ -2232,6 +2232,7 @@
       </section>
     </main>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <script>
     (() => {
       const themeToggle = document.getElementById("theme-toggle");
@@ -2273,6 +2274,131 @@
         const collapsed = document.body.classList.contains("sidebar-collapsed");
         setSidebar(!collapsed);
       });
+
+      const resolvePdfHref = (href) => {
+        if (!href) {
+          return null;
+        }
+        if (/^https?:\/\//i.test(href)) {
+          return href;
+        }
+        if (href.startsWith("../")) {
+          const basePath = window.location.pathname.replace(/\/[^/]*$/, "/");
+          return `${basePath}${href.replace(/^(\.\.\/)+/, "")}`;
+        }
+        return href;
+      };
+
+      const injectPdfContainers = () => {
+        const docs = Array.from(document.querySelectorAll(".doc"));
+        docs.forEach((doc) => {
+          const link = doc.querySelector(".pdf-link");
+          const content = doc.querySelector(".doc-content");
+          if (!link || !content) {
+            return;
+          }
+          const resolvedHref = resolvePdfHref(link.getAttribute("href"));
+          if (!resolvedHref) {
+            return;
+          }
+          link.setAttribute("href", resolvedHref);
+          const pdfUrl = link.href;
+          const container = document.createElement("div");
+          container.className = "pdf-pages";
+          container.dataset.pdfSrc = pdfUrl;
+          const loading = document.createElement("p");
+          loading.className = "pdf-loading";
+          loading.textContent = "Loading PDF pages…";
+          container.appendChild(loading);
+          content.parentNode.insertBefore(container, content);
+        });
+      };
+
+      const renderPdfPages = async (container) => {
+        if (container.dataset.rendered === "true") {
+          return;
+        }
+        container.dataset.rendered = "true";
+        const pdfUrl = container.dataset.pdfSrc;
+        const loading = container.querySelector(".pdf-loading");
+        if (!pdfUrl || !window.pdfjsLib) {
+          if (loading) {
+            loading.textContent = "PDF preview unavailable.";
+            loading.classList.add("pdf-error");
+          }
+          return;
+        }
+        try {
+          const pdf = await window.pdfjsLib.getDocument(pdfUrl).promise;
+          if (loading) {
+            loading.remove();
+          }
+          for (let pageNum = 1; pageNum <= pdf.numPages; pageNum += 1) {
+            const page = await pdf.getPage(pageNum);
+            const viewport = page.getViewport({ scale: 1.2 });
+            const wrapper = document.createElement("div");
+            wrapper.className = "pdf-page";
+            const label = document.createElement("div");
+            label.className = "pdf-page-label";
+            label.textContent = `Page ${pageNum}`;
+            wrapper.appendChild(label);
+            const canvas = document.createElement("canvas");
+            const context = canvas.getContext("2d", { alpha: false });
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+            wrapper.appendChild(canvas);
+            container.appendChild(wrapper);
+            await page.render({ canvasContext: context, viewport }).promise;
+          }
+        } catch (error) {
+          console.error("Failed to render PDF pages", error);
+          if (loading) {
+            loading.textContent = "Failed to load PDF pages.";
+            loading.classList.add("pdf-error");
+          }
+        }
+      };
+
+      const setupPdfRendering = () => {
+        const containers = Array.from(document.querySelectorAll(".pdf-pages"));
+        if (!containers.length) {
+          return;
+        }
+        if (!window.pdfjsLib) {
+          containers.forEach((container) => {
+            const loading = container.querySelector(".pdf-loading");
+            if (loading) {
+              loading.textContent = "PDF preview unavailable.";
+              loading.classList.add("pdf-error");
+            }
+          });
+          return;
+        }
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+          "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+        if (!("IntersectionObserver" in window)) {
+          containers.forEach((container) => {
+            renderPdfPages(container);
+          });
+          return;
+        }
+        const observer = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) {
+                return;
+              }
+              obs.unobserve(entry.target);
+              renderPdfPages(entry.target);
+            });
+          },
+          { rootMargin: "300px" }
+        );
+        containers.forEach((container) => observer.observe(container));
+      };
+
+      injectPdfContainers();
+      setupPdfRendering();
     })();
   </script>
 </body>
