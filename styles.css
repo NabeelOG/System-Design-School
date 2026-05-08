@@ -9,7 +9,6 @@
   --content-bg: #ffffff;
   --text: #0f172a;
   --muted: #475569;
-  --toggle-button-font-size: 0.8rem;
 }
 
 .theme-dark {
@@ -69,15 +68,15 @@ body {
   color: var(--sidebar-text);
   border-radius: 999px;
   padding: 6px 12px;
-  font-size: var(--toggle-button-font-size);
+  font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
 }
 
 .toggle-button:hover,
 .toggle-button:focus {
-  background: rgba(56, 189, 248, 0.2);
-  border-color: rgba(56, 189, 248, 0.6);
+  background: color-mix(in srgb, var(--accent) 20%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 60%, transparent);
 }
 
 .sidebar-header h1 {
